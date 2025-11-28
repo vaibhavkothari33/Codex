@@ -13,6 +13,12 @@ export default {
   				'system-ui',
   				'sans-serif'
   			],
+  			serif: [
+  				'Playfair Display',
+  				'Georgia',
+  				'Times New Roman',
+  				'serif'
+  			],
   			mono: [
   				'JetBrains Mono',
   				'ui-monospace',
@@ -23,7 +29,7 @@ export default {
   		},
   		colors: {
   			codex: {
-  				bg: '#05060A',
+  				bg: '#141412',
   				surface: '#0C0F16',
   				surfaceSoft: '#111520',
   				panel: '#0C0F16',

@@ -7,7 +7,8 @@ import ArchitectureSteps from "@/components/architecture/ArchitectureSteps";
 import ArchitectureDiagram from "@/components/architecture/ArchitectureDiagram";
 import PricingCard from "@/components/pricing/PricingCard";
 import LogoLoop from "@/components/ui/LogoLoop";
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiVercel, SiFramer } from 'react-icons/si';
+import { CurvedLoopWrapper } from "@/components/ui/CurvedLoopWrapper";
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiVercel, SiFramer, SiJavascript, SiVite } from 'react-icons/si';
 import { motion } from "motion/react";
 
 const techLogos = [
@@ -17,7 +18,9 @@ const techLogos = [
   { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
   { node: <SiVercel />, title: "Vercel", href: "https://vercel.com" },
   { node: <SiFramer />, title: "Framer", href: "https://framer.com" },
-  // { node: <SiThreejs />, title: "Three.js", href: "https://threejs.org" },
+  { node: <SiJavascript />, title: "JavaScript", href: "https://www.javascript.com" },
+  { node: <SiVite />, title: "Vite", href: "https://vitejs.dev" },
+  
   
   
 ];
@@ -31,7 +34,7 @@ export default function HomePage() {
 
         <motion.section 
           id="features" 
-          className="w-full bg-codex-bg"
+          className="w-full"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -55,7 +58,7 @@ export default function HomePage() {
 
         <motion.section 
           id="technologies" 
-          className="w-full bg-codex-bg py-16 md:py-20"
+          className="w-full py-16 md:py-20"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -64,17 +67,17 @@ export default function HomePage() {
           <div className="max-w-[1100px] mx-auto px-6">
             <div className="space-y-8">
               <div className="text-center space-y-2">
-                <p className="font-mono text-xs text-codex-muted tracking-wider uppercase">
+                <p className="font-sans text-xs text-codex-muted tracking-wider uppercase">
                   Used By
                 </p>
-                <p className="text-sm text-codex-muted max-w-2xl mx-auto">
+                <p className="text-sm text-codex-muted max-w-2xl mx-auto font-normal">
                   Trusted by employees of leading companies and teams worldwide.
                 </p>
               </div>
-              <div className="relative" style={{ height: '120px' }}>
+              <div className="relative flex items-center justify-center bg-transparent" style={{ height: '120px' }}>
                 <LogoLoop
                   logos={techLogos}
-                  speed={120}
+                  speed={20}
                   direction="left"
                   logoHeight={48}
                   gap={40}
@@ -91,7 +94,7 @@ export default function HomePage() {
 
         <motion.section 
           id="architecture" 
-          className="w-full bg-codex-bg py-16 md:py-24"
+          className="w-full  py-16 md:py-24"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -101,7 +104,7 @@ export default function HomePage() {
             <div className="space-y-10 md:space-y-12">
               <div className="text-center space-y-4">
                 <p className="font-sans text-xs text-[#E29A4C] tracking-wider uppercase">
-                  SYSTEM ARCHITECTURE
+                  System Architecture
                 </p>
                 <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-codex-ink">
                   Engineered for
@@ -110,7 +113,7 @@ export default function HomePage() {
                 </h2>
               </div>
               <div className="space-y-10">
-                <p className="text-sm md:text-base text-codex-muted leading-relaxed max-w-2xl mx-auto text-center md:text-left md:mx-0">
+                <p className="text-sm md:text-base text-codex-muted leading-relaxed max-w-2xl mx-auto text-center">
                   Codex processes every request through a deterministic pipeline that analyzes context,
                   hydrates state from your repository, and executes tools in a controlled sequence.
                   Each stage is isolated and testable, ensuring consistent behavior across environments.
@@ -186,8 +189,17 @@ export default function HomePage() {
           </div>
         </motion.section>
 
-        <section className="w-full max-w-4xl pt-8 border-t border-white/5 mt-4 mb-10">
-          <p className="text-[0.7rem] sm:text-xs text-codex-muted text-center max-w-md mx-auto">
+        <section className="w-full pt-8 border-t border-white/5 mt-4 mb-10  pb-20 overflow-hidden">
+          <div className="py-12 w-full mb-20 ">
+            <CurvedLoopWrapper 
+              marqueeText="OPERATES YOUR CODEBASE, EVOLVING AT THOUGHT SPEED ✦ ONE WINDOW, ONE BUFFER, ONE BRAIN ✦"
+              speed={2}
+              curveAmount={300}
+              direction="left"
+              interactive={true}
+            />
+          </div>
+          <p className="text-[0.7rem] sm:text-xs text-codex-muted text-center max-w-md mx-auto mt-8">
             One window, one buffer, one brain. No dashboards, no tabs — just you, your repo,
             and Codex quietly doing the heavy lifting.
           </p>

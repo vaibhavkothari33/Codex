@@ -50,7 +50,7 @@ export default function ArchitectureDiagram() {
           </marker>
         </defs>
 
-        <rect width="100%" height="100%" fill="#05060A" />
+        <rect width="100%" height="100%" fill="#141412" />
         <rect width="100%" height="100%" fill="url(#grid)" />
 
         <g>
